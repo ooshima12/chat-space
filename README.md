@@ -22,7 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-## userstable
+## users table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -30,6 +30,6 @@ Things you may want to cover:
 |mail|string|null: false|
 
 ### Association
-- has_many :group,through:members
+- has_many :groups,through:members
 - has_many :massages
 - has_many :members
