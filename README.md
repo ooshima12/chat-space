@@ -33,3 +33,40 @@ Things you may want to cover:
 - has_many :groups,through:members
 - has_many :massages
 - has_many :members
+
+
+## members table
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
+
+
+## groups table
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false,  unique: true|
+
+### Association
+- has_many :users, through: :members
+- has_many :messages
+
+
+## massages table
+
+|Column|Type|Options|
+|------|----|-------|
+|body|string|
+|image|string|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
