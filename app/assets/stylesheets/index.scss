@@ -1,37 +1,42 @@
 .var-side {
-  background-color: #2f3e51;
-  color: #fff;
-  position: fixed;
-  width: 300px;
-  height: 100%;
+    background-color: #253141;
+    color: #fff;
+    position: fixed;
+    width: 300px;
+    height: 100% ;
+    
 
-  .user {
-   background-color: #253141;
-   float: left; 
-   font-size: 16px;
-   height: 91px;
-   text-align: left;
-   padding: 18px 50px 18px 40px;
-  }
-
-  .groups {
-    float: left; 
-    height: 91px;
-    text-align: left;
-    padding: 18px 50px 18px 40px;
-  
-    .list {
-      .group1{
-       .name{
-         margin: 20px 0 5px 0;
-         font-size: 15px;
-       }
-
-       .massage{
-         margin: 0 0 30px;
-         font-size: 11px;
-       }
-      }
+    &__user {
+        background-color: #253141;
+        float: left; 
+        font-size: 16px;
+        position: fixed;
+        width: 300px;
+        padding: 20px 20px 40px 20px;
     }
+
+      &__groups {
+        background-color: #2f3e51;
+        float: left; 
+        text-align: left;
+        // position: relative;
+        width: 300px; 
+        height: 100%;
+
+
+  
+        &__list {
+          .group1{
+             .name{
+                  margin: 20px 0 5px 0;
+                  font-size: 15px;
+        }
+
+        &__messages{
+           margin: 0 0 30px;
+           font-size: 11px;
+        }
+      }
+      }
   }
 }
