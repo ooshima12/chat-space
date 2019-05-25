@@ -1,4 +1,7 @@
 @import "./reset";
-@import "./modules/*";
-@import "font-awesome";
+@import "./mixin/flexbox";
 @import "./config/variable";
+@import "./modules/main";
+@import "./modules/var-side";
+@import "./config/colors";
+@import "font-awesome";
