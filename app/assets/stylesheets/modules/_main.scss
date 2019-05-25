@@ -1,0 +1,108 @@
+.chatroom {
+  background-color: $white;
+  height: 90vh;
+  width: calc(100vw - 300px);
+  float: left;
+  .chatroom__header {
+    height: 15%;
+    border: 1px, #eeeeee;
+    position: relative;
+    &-name {
+      color: $black;
+      font-size: 20px;
+      position: absolute;
+      top: 35px;
+      bottom: 15px;
+      margin-left: 40px;
+    }
+    &-member {
+      color: $gray;
+      font-size: 12px;
+      margin-left: 40px;
+      position: absolute;
+      top: 70px;
+      bottom: 15px;
+    }
+    &-edit {
+      color: $lightblue;
+      font-size: 15px;
+      float: right;
+      border: 1px solid $lightblue;
+      margin-right: 40px;
+      margin-top: 28px;
+      padding: 12.5px 20px 12.5px 20px;
+    }
+  }
+
+  .chatroom__body {
+    background-color: white gray;
+    height: 85%;
+    width: calc(100vw - 300px);
+    position: relative;
+    overflow: scroll;
+    &-message {
+      margin-left: 40px;
+      padding-top: 46px;
+      .chatroom__body--message-name{
+        font-size: 20px;
+        font-weight: bold;
+        color: $black;
+        position: relative;
+        display: inline-block;
+      }
+      .chatroom__body--message-time{
+        color: $gray;
+        font-size: 10px;
+        display: inline;
+      }
+      .chatroom__body--message-body{
+        color: $black;
+        font-size: 14px;
+        padding-top: 10px;
+        padding-bottom: 40px;
+      }
+    }
+
+  }
+  .chatroom__footer {
+    width: calc(100vw - 300px);
+    height: 90px;
+    background-color: $gray2;
+    clear: both;
+    position: absolute;
+    bottom: 0px;
+    .chatroom__footer-message{
+      margin-left: 40px;
+      padding-top: 20px;
+      display: inline-block;
+      position: relative;
+      .chatroom__footer--message-form{
+        }
+        .chatroom__footer--message-input{
+          height: 50px;
+          font-size: 16px;
+          color: $form;
+          border: none;
+         }
+        .chatroom__footer--message-image{
+          position: absolute;
+          right: 20px;
+          height: 50px;
+          width: 30px;
+          margin: 20px 0px 20px;
+          top: 0;
+          right: 0;
+          }
+          .chatroom__footer--botton{
+            background-color:$lightblue;
+            padding: 12.5px 20px 12.5px 20px;
+            color: $white;
+            height: 50px;
+            border: none;
+            margin-left: 50px;
+            margin-bottom: 40px;
+          
+      }
+    }
+  }
+}
