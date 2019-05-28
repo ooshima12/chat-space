@@ -1,4 +1,4 @@
-.chat   {
+.chat {
   width: calc(100% - 300px);
   .header {
     box-sizing: border-box;
@@ -83,11 +83,11 @@
         font-size: 20px;
         line-height: 50px;
       }
-      .hidden{
+      .hidden {
         display: none;
       }
     }
-    &__submit{
+    &__submit {
       background-color: $light_blue;
       border: none;
       color: $white;
