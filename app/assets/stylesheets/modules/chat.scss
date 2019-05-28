@@ -12,7 +12,8 @@
         margin-top: 35px;
       }
       &__members {
-        color: #999;
+        @include flexbox;
+        color: $light_gray;
         display: flex;
         font-size: 12px;
         margin-top: 15px;
@@ -23,15 +24,20 @@
       }
     }
     .right-header {
-      border:1px solid $light_blue;
+      border: 1px solid $light_blue;
       color: $light_blue;
       float: right;
       height: 40px;
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
+      &__button {
+        color: $light_blue;
+        text-decoration: none;
+      }
     }
   }
+
   .messages {
     background-color: #FAFAFA;
     box-sizing: border-box;
@@ -41,12 +47,12 @@
       .upper-message {
         display: flex;
         &__user-name {
-          color: #434a54;
+          color:  $black;
           font-size: 16px;
           font-weight: bold;
         }
         &__date {
-          color: #999;
+          color: $light_gray;
           font-size: 12px;
           padding-left: 10px;
         }
@@ -54,7 +60,7 @@
       .lower-message {
         margin-top: 10px;
         &__content {
-          color: #434a54;
+          color: $black;
           font-size: 14px;
           margin-bottom: 40px;
         }
@@ -71,7 +77,6 @@
       border: none;
       float: left;
       height: 50px;
-      padding: 0 10px;
       width: calc(100% - 150px);
     }
     &__mask {
