@@ -7,7 +7,7 @@ $(function(){
                     </div>
                     <div class="upper-message__date">
                       ${ message.time }
-                    </div>
+                      </div>
                   </div>
                   <div class="lower-message">
                     <p class="lower-message__content">
@@ -15,7 +15,7 @@ $(function(){
                     </p>
                   </div>
                 </div>`;
-    return html;
+  return html;
   }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -32,7 +32,10 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html)
-      $('.textbox').val('')
+      $('.form__message').val('');
+      $('.form__submit').removeAttr('disabled');
+      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+      return false
     })
     .fail(function(){
       alert('error');
