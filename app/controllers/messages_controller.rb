@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
         format.json
     end
     else
-      @message = @group.message.includes(:user)
+      @messages = @group.message.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください'
       render :index
     end
