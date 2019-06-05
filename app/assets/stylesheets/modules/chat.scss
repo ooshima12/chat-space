@@ -12,7 +12,6 @@
         margin-top: 35px;
       }
       &__members {
-        @include flexbox;
         color: $light_gray;
         display: flex;
         font-size: 12px;
@@ -31,14 +30,11 @@
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
-      &__button {
-        color: $light_blue;
-        text-decoration: none;
-      }
     }
   }
 
   .messages {
+    overflow: auto;
     background-color: #FAFAFA;
     box-sizing: border-box;
     height: calc(100vh - 100px - 90px);
