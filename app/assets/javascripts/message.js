@@ -38,10 +38,11 @@ $(function(){
       $('.form__submit').removeAttr('disabled');
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       $('.hidden').val('');
-      return false
     })
     .fail(function(){
       alert('error');
     })
+    $form.reset();
+    return false;
   })
 });
