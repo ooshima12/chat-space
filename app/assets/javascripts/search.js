@@ -1,4 +1,4 @@
-$(function(){
+$(document).on('turbolinks:load', function(){
   var user_list = $("#user-search-result");
   var member_list = $("#member-search-result");
 
@@ -21,9 +21,8 @@ $(function(){
             <a class='user_search_remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
             </div>`
     member_list.append(html);
-}
-
-  $(function () {
+  }
+ 
     $(".chat-group-form__input").on("keyup", function() {
       var input = $("#user-search-field").val();
       $.ajax({
@@ -35,18 +34,17 @@ $(function(){
       .done(function(members) {
         $("#user-search-result").empty();
         if (members.length !== 0) {
-          members.forEach(function(user){
-            appendUsers(user);
+            members.forEach(function (user) {
+              appendUsers(user);
           })
         }
       })
       .fail(function() {
         alert('ユーザー検索に失敗しました');
-      });
+      })
     });
-  });
 
-  $(function () {
+
     $(document).on("click", '.user_search_add', function () {
         var name = $(this).attr("data-user-name");
         var user_id = $(this).attr("data-user-id");
@@ -56,5 +54,4 @@ $(function(){
     $(document).on("click", '.user_search_remove', function () {
         $(this).parent().remove();
     });
-  });
 });

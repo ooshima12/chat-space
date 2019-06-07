@@ -22,11 +22,12 @@
   .chat-group-form__field.clearfix
     .chat-group-form__field--left
       = f.label :チャットメンバー,class: "chat-group-form__label"
-
     .chat-group-form__field--right
       #chat-group-users
-      #chat-group-user-22.chat-group-user.clearfix
-        = f.hidden_field :user_ids, value: current_user.id, multiple: true
+        #chat-group-user-22.chat-group-user.clearfix
+          = f.hidden_field :user_ids, value: current_user.id, multiple: true
+          %p.chat-group-user__name
+            = current_user.name
 
       #member-search-result
   .chat-group-form__field.clearfix
